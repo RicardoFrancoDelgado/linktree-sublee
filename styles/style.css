@@ -1,0 +1,204 @@
+:root {
+  --color-link-base: #d9d9d9;
+  --color-hover-retirada: #61ebf3;
+  --color-hover-box: #fd0079;
+  --color-hover-loja: #fee60b;
+  --color-hover-outlet: #0d0d0d;
+  --color-background: #1a1a2a;
+  --color-primary-text: #f2f2f2;
+
+  /* 16px = 1.6rem */
+  font-size: 62.5%;
+}
+
+html,
+body,
+a {
+  background-color: var(--color-background);
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Ajustando o header*/
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-section img {
+  width: 250px;
+
+  margin-top: 2.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.title-section a {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2.2rem;
+
+  color: var(--color-primary-text);
+}
+
+.title-section {
+  margin-bottom: 2.6rem;
+}
+
+/* Estilizando os links */
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.2rem;
+
+  transition: 0.5s;
+}
+
+.header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: black;
+
+  width: 100vw;
+  height: 100vh;
+
+  max-width: 50.5rem;
+  max-height: 8rem;
+
+  padding: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.7rem;
+
+  border-radius: 20px;
+
+  background-color: var(--color-link-base);
+  transition: 0.5s;
+}
+
+.header i {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+/* Animações e hover */
+
+.links:has(.header:hover) .header:not(:hover) {
+  opacity: 0.4;
+  translate: 1.7rem;
+
+  transition: 0.7s;
+}
+
+.retirada-content a:hover {
+  background-color: var(--color-hover-retirada);
+  transition: 0.5s;
+}
+
+.box-content a:hover {
+  color: var(--color-primary-text);
+  background-color: var(--color-hover-box);
+  transition: 0.5s;
+}
+
+.loja-content a:hover {
+  background-color: var(--color-hover-loja);
+  transition: 0.5s;
+}
+
+.outlet-content a:hover {
+  color: var(--color-primary-text);
+  background-color: var(--color-hover-outlet);
+  transition: 0.5s;
+}
+
+/* Link social media scale e hover*/
+
+.socials-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.socials a {
+  text-decoration: none;
+  font-size: 4rem;
+  color: var(--color-primary-text);
+
+  transition: 0.7s;
+}
+
+.socials a:nth-child(1):hover {
+  color: #25d366;
+  transition: 0.5s;
+}
+
+.socials a:nth-child(2):hover {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4,
+    #0083c7,
+    #00a99d
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s;
+}
+
+.socials a:nth-child(3):hover {
+  color: #1877f2;
+  transition: 0.5s;
+}
+
+.socials a:nth-child(4):hover {
+  background: linear-gradient(to right, #69c9d0, #ff6699, #ee1d52, #ffde00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s;
+}
+
+.socials a:nth-child(5):hover {
+  color: #ff0000;
+  transition: 0.5s;
+}
+
+.socials:has(a:hover) a:not(:hover) {
+  opacity: 0.4;
+  scale: 0.75;
+
+  transition: 0.7s;
+}
+
+/* Responsividade */
+@media screen and (max-width: 520px) {
+  .header a {
+    max-width: 28rem;
+    font-size: 1.6rem;
+  }
+
+  .socials a {
+    font-size: 3rem;
+  }
+}
